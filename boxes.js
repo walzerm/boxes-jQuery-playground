@@ -7,11 +7,18 @@ $( document ).ready(function() {
 	});
 
 	var redBoxes = $(".boxType1");
-	var link = redBoxes.html('<a href="http://www.galvanize.com/"></a>');
+	var galvanizeLink = redBoxes.html('<a href="http://www.galvanize.com/">Galvanize</a>');
 	redBoxes.on("click", function() {
-		window.location = $(this).find("a").attr("href");
+		alert("You can't leave this page!");
+		//window.location = $(this).find("a").attr("href");
 		return false;
 	});
+
+	var boxes = $(".box");
+	boxes.on("click", function() {
+		$(this).toggleClass("image");
+	});
+
 });
 
 

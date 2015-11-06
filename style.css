@@ -41,3 +41,7 @@
 .boxType3 {
   background: blue;
 }
+
+.image {
+  background-image: url('http://lorempixel.com/output/cats-q-c-145-145-8.jpg');
+}
