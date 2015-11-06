@@ -1,24 +1,17 @@
 $( document ).ready(function() {
 	console.log( "ready!" );
 
-	var secretBox = $("#secretBox");
-	secretBox.css("background", "white");
+	var xAndY = $("#container");
+	xAndY.on("click", function() {
+		console.log("X: " + event.pageX + ", Y: " + event.pageY);
+	});
 
-	var children = $("#row1").children();
-	children.addClass("boxType3");
-
-	var lastChild = $("#row4").children().last();
-	lastChild.hide();
-
-	var toWhite = $(".boxType1");
-	toWhite.css("background", "white");
-
-	var clearCSS = $("#row2 div").filter(":nth-child(2), :nth-child(1)");
-	//clearCSS.css("background", "yellow");
-	clearCSS.removeClass("box boxType3 boxType2");
-	
-	var smallWidth = $("div").not(".row #secretBox");
-	smallWidth.css("width", "2px");
+	var redBoxes = $(".boxType1");
+	var link = redBoxes.html('<a href="http://www.galvanize.com/"></a>');
+	redBoxes.on("click", function() {
+		window.location = $(this).find("a").attr("href");
+		return false;
+	});
 });
 
 
